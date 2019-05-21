@@ -1,0 +1,12 @@
+{
+  "dsoTrabalho2App": {
+    "Categoria": {
+      "null": "",
+      "LIVRO": "LIVRO",
+      "INFORMATICA": "INFORMATICA",
+      "ESPORTIVOS": "ESPORTIVOS",
+      "LAZER": "LAZER",
+      "OUTROS": "OUTROS"
+    }
+  }
+}

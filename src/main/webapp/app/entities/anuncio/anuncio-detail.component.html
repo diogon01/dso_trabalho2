@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="anuncio">
+            <h2><span jhiTranslate="dsoTrabalho2App.anuncio.detail.title">Anuncio</span> {{anuncio.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.titulo">Titulo</span></dt>
+                <dd>
+                    <span>{{anuncio.titulo}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.valorMin">Valor Min</span></dt>
+                <dd>
+                    <span>{{anuncio.valorMin}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.valorMax">Valor Max</span></dt>
+                <dd>
+                    <span>{{anuncio.valorMax}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.categoria">Categoria</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'dsoTrabalho2App.Categoria.' + anuncio.categoria}}">{{anuncio.categoria}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.tituloVenda">Titulo Venda</span></dt>
+                <dd>
+                    <div *ngIf="anuncio.tituloVenda">
+                        <a [routerLink]="['/venda', anuncio.tituloVenda?.id, 'view']">{{anuncio.tituloVenda?.title}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.anuncio.endereco">Endereco</span></dt>
+                <dd>
+                    <div *ngIf="anuncio.endereco">
+                        <a [routerLink]="['/endereco', anuncio.endereco?.id, 'view']">{{anuncio.endereco?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/anuncio', anuncio.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

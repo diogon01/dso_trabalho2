@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-anuncio-heading" jhiTranslate="dsoTrabalho2App.anuncio.home.createOrEditLabel">Create or edit a Anuncio</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!anuncio.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.titulo" for="field_titulo">Titulo</label>
+                    <input type="text" class="form-control" name="titulo" id="field_titulo"
+                           formControlName="titulo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.valorMin" for="field_valorMin">Valor Min</label>
+                    <input type="number" class="form-control" name="valorMin" id="field_valorMin"
+                           formControlName="valorMin"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.valorMax" for="field_valorMax">Valor Max</label>
+                    <input type="number" class="form-control" name="valorMax" id="field_valorMax"
+                           formControlName="valorMax"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.categoria" for="field_categoria">Categoria</label>
+                    <select class="form-control" name="categoria" formControlName="categoria" id="field_categoria">
+                        <option value="LIVRO">{{'dsoTrabalho2App.Categoria.LIVRO' | translate}}</option>
+                        <option value="INFORMATICA">{{'dsoTrabalho2App.Categoria.INFORMATICA' | translate}}</option>
+                        <option value="ESPORTIVOS">{{'dsoTrabalho2App.Categoria.ESPORTIVOS' | translate}}</option>
+                        <option value="LAZER">{{'dsoTrabalho2App.Categoria.LAZER' | translate}}</option>
+                        <option value="OUTROS">{{'dsoTrabalho2App.Categoria.OUTROS' | translate}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.tituloVenda" for="field_tituloVenda">Titulo Venda</label>
+                    <select class="form-control" id="field_tituloVenda" name="tituloVenda" formControlName="tituloVenda">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="vendaOption.id === editForm.get('tituloVenda').value?.id ? editForm.get('tituloVenda').value : vendaOption" *ngFor="let vendaOption of titulovendas; trackBy: trackVendaById">{{vendaOption.title}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dsoTrabalho2App.anuncio.endereco" for="field_endereco">Endereco</label>
+                    <select class="form-control" id="field_endereco" name="endereco" formControlName="endereco">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="enderecoOption.id === editForm.get('endereco').value?.id ? editForm.get('endereco').value : enderecoOption" *ngFor="let enderecoOption of enderecos; trackBy: trackEnderecoById">{{enderecoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

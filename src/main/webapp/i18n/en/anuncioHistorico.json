@@ -1,0 +1,23 @@
+{
+  "dsoTrabalho2App": {
+    "anuncioHistorico": {
+      "home": {
+        "title": "Anuncio Historicos",
+        "createLabel": "Create a new Anuncio Historico",
+        "createOrEditLabel": "Create or edit a Anuncio Historico"
+      },
+      "created": "A new Anuncio Historico is created with identifier {{ param }}",
+      "updated": "A Anuncio Historico is updated with identifier {{ param }}",
+      "deleted": "A Anuncio Historico is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Anuncio Historico {{ id }}?"
+      },
+      "detail": {
+        "title": "Anuncio Historico"
+      },
+      "dataInicio": "Data Inicio",
+      "dataFinal": "Data Final",
+      "job": "Job"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "dsoTrabalho2App": {
+    "anuncio": {
+      "home": {
+        "title": "Anuncios",
+        "createLabel": "Criar novo Anuncio",
+        "createOrEditLabel": "Criar ou editar Anuncio"
+      },
+      "created": "Um novo Anuncio foi criado com o identificador {{ param }}",
+      "updated": "Um Anuncio foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Anuncio foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Anuncio {{ id }}?"
+      },
+      "detail": {
+        "title": "Anuncio"
+      },
+      "titulo": "Titulo",
+      "valorMin": "Valor Min",
+      "valorMax": "Valor Max",
+      "categoria": "Categoria",
+      "tituloVenda": "Titulo Venda",
+      "endereco": "Endereco"
+    }
+  }
+}

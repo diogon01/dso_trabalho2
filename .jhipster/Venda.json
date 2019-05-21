@@ -1,0 +1,32 @@
+{
+    "name": "Venda",
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "resumo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "anuncio",
+            "otherEntityRelationshipName": "tituloVenda",
+            "relationshipName": "job",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190521202354",
+    "javadoc": "Task entity.\n@author The JHipster team.",
+    "entityTableName": "venda",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="endereco">
+            <h2><span jhiTranslate="dsoTrabalho2App.endereco.detail.title">Endereco</span> {{endereco.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dsoTrabalho2App.endereco.rua">Rua</span></dt>
+                <dd>
+                    <span>{{endereco.rua}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.endereco.zip">Zip</span></dt>
+                <dd>
+                    <span>{{endereco.zip}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.endereco.cidade">Cidade</span></dt>
+                <dd>
+                    <span>{{endereco.cidade}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.endereco.urf">Urf</span></dt>
+                <dd>
+                    <span>{{endereco.urf}}</span>
+                </dd>
+                <dt><span jhiTranslate="dsoTrabalho2App.endereco.estado">Estado</span></dt>
+                <dd>
+                    <div *ngIf="endereco.estado">
+                        <a [routerLink]="['/estado', endereco.estado?.id, 'view']">{{endereco.estado?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/endereco', endereco.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

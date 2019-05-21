@@ -1,0 +1,19 @@
+{
+    "name": "Pais",
+    "fields": [
+        {
+            "fieldName": "nomePais",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190521202353",
+    "entityTableName": "pais",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

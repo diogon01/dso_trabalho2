@@ -1,0 +1,31 @@
+{
+    "name": "AnuncioHistorico",
+    "fields": [
+        {
+            "fieldName": "dataInicio",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "dataFinal",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "anuncio",
+            "otherEntityRelationshipName": "anuncioHistorico",
+            "relationshipName": "job",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190521202357",
+    "entityTableName": "anuncio_historico",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

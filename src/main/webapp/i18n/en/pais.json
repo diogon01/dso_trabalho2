@@ -1,0 +1,21 @@
+{
+  "dsoTrabalho2App": {
+    "pais": {
+      "home": {
+        "title": "Pais",
+        "createLabel": "Create a new Pais",
+        "createOrEditLabel": "Create or edit a Pais"
+      },
+      "created": "A new Pais is created with identifier {{ param }}",
+      "updated": "A Pais is updated with identifier {{ param }}",
+      "deleted": "A Pais is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pais {{ id }}?"
+      },
+      "detail": {
+        "title": "Pais"
+      },
+      "nomePais": "Nome Pais"
+    }
+  }
+}

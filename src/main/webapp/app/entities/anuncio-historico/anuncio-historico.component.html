@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="dsoTrabalho2App.anuncioHistorico.home.title">Anuncio Historicos</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-anuncio-historico" [routerLink]="['/anuncio-historico/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="dsoTrabalho2App.anuncioHistorico.home.createLabel">
+            Create new Anuncio Historico
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="anuncioHistoricos">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dataInicio"><span jhiTranslate="dsoTrabalho2App.anuncioHistorico.dataInicio">Data Inicio</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="dataFinal"><span jhiTranslate="dsoTrabalho2App.anuncioHistorico.dataFinal">Data Final</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="job.id"><span jhiTranslate="dsoTrabalho2App.anuncioHistorico.job">Job</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let anuncioHistorico of anuncioHistoricos ;trackBy: trackId">
+                <td><a [routerLink]="['/anuncio-historico', anuncioHistorico.id, 'view' ]">{{anuncioHistorico.id}}</a></td>
+                <td>{{anuncioHistorico.dataInicio | date:'medium'}}</td>
+                <td>{{anuncioHistorico.dataFinal | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="anuncioHistorico.job">
+                        <a [routerLink]="['../anuncio', anuncioHistorico.job?.id, 'view' ]" >{{anuncioHistorico.job?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/anuncio-historico', anuncioHistorico.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/anuncio-historico', anuncioHistorico.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'anuncio-historico', { outlets: { popup: anuncioHistorico.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

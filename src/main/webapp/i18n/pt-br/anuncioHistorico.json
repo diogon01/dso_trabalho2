@@ -1,0 +1,23 @@
+{
+  "dsoTrabalho2App": {
+    "anuncioHistorico": {
+      "home": {
+        "title": "Anuncio Historicos",
+        "createLabel": "Criar novo Anuncio Historico",
+        "createOrEditLabel": "Criar ou editar Anuncio Historico"
+      },
+      "created": "Um novo Anuncio Historico foi criado com o identificador {{ param }}",
+      "updated": "Um Anuncio Historico foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Anuncio Historico foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Anuncio Historico {{ id }}?"
+      },
+      "detail": {
+        "title": "Anuncio Historico"
+      },
+      "dataInicio": "Data Inicio",
+      "dataFinal": "Data Final",
+      "job": "Job"
+    }
+  }
+}

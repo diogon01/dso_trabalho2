@@ -1,0 +1,49 @@
+{
+    "name": "Anuncio",
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valorMin",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "valorMax",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "categoria",
+            "fieldType": "Categoria",
+            "fieldValues": "LIVRO,INFORMATICA,ESPORTIVOS,LAZER,OUTROS"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "venda",
+            "otherEntityRelationshipName": "job",
+            "relationshipName": "tituloVenda",
+            "otherEntityField": "title",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "endereco",
+            "otherEntityRelationshipName": "anuncio",
+            "relationshipName": "endereco",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190521202355",
+    "entityTableName": "anuncio",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
