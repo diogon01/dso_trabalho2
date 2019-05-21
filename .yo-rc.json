@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.trocas.dso2",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "dso_trabalho2",
+    "packageName": "com.trocas.dso2",
+    "packageFolder": "com/trocas/dso2",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGVhNjIyMWU0NzcwNTRhMTFhOTZhZjRhYzBlZGE1ZGJlOWRiMGM1NGM2Yzc2OTYzZTc5NmYxYzA4ZThkNjM4OWZkOGIwZTMzZTZjYzk0NDQ2MTZhMzYxNmExYjI0MjMyYzBlMzgwYTQ0MWYzNjY0ZGFlYmFlNWFmNDU3NGJhMjM=",
+    "clientFramework": "angularX",
+    "clientTheme": "journal",
+    "clientThemeVariant": "dark",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": ["pt-br", "en"]
+  }
+}
