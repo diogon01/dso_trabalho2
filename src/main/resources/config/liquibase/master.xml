@@ -11,6 +11,16 @@
     <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202352_added_entity_Estado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202353_added_entity_Pais.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202354_added_entity_Venda.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202355_added_entity_Anuncio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202356_added_entity_Endereco.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202357_added_entity_AnuncioHistorico.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190521202352_added_entity_constraints_Estado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202355_added_entity_constraints_Anuncio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202356_added_entity_constraints_Endereco.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190521202357_added_entity_constraints_AnuncioHistorico.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
